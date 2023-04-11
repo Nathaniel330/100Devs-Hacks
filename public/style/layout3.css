@@ -1,0 +1,42 @@
+* {
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+}
+
+html, body {
+    background-color: #c0c0c0;
+    height: 100%;
+}
+
+header,
+footer {
+    border: solid;
+    height: 20%;
+}
+
+section, 
+div {
+    border: solid;
+    height: 60%;
+}
+
+div,section {
+    float: left;
+}
+
+div {
+    width: 20%;
+}
+
+section {
+    width: 40%;
+}
+
+footer {
+    clear: both;
+}

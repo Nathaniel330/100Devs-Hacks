@@ -26,10 +26,10 @@
 | &#9744; | Do the [Restaurant](public/img/resources/restaurant.png) & [Hair Salon](public/img/resources/hair-salon.png) layouts |  |
 | &#9744; | Watch [JavaScript crash course for beginners](https://youtu.be/hdI2bqOjy3c) |  |
 | &#9744; | Extras<li>Complete [Pushwork](public/img/resources/pushwork.png) layout</li><li>Add media queries to other layouts</li><li>[FCC Flexbox Tutorial](https://www.freecodecamp.org/news/css-flexbox-tutorial-with-cheatsheet/)</li><li>[Flexbox in 20 minutes](https://youtu.be/JJSoEo8JSnc)</li><li>[Flexbox Zombies](https://mastery.games/flexboxzombies/)</li> |  |
-| &#9744; | Read [Javascript.info: Variables](https://javascript.info/variables) and do the tasks |  |
-| &#9744; | Read [Javascript.info: Function Basics](https://javascript.info/function-basics) and do the tasks |  |
-| &#9744; | Read [Javascript.info: Function Expressions](https://javascript.info/function-expressions) and do the tasks |  |
-| &#9744; | Read [Javascript.info: Arrow Function Basics](https://javascript.info/arrow-functions-basics) and do the tasks |  |
+| &#9745; | Read [Javascript.info: Variables](https://javascript.info/variables) and do the tasks |  |
+| &#9745; | Read [Javascript.info: Function Basics](https://javascript.info/function-basics) and do the tasks |  |
+| &#9745; | Read [Javascript.info: Function Expressions](https://javascript.info/function-expressions) and do the tasks |  |
+| &#9745; | Read [Javascript.info: Arrow Function Basics](https://javascript.info/arrow-functions-basics) and do the tasks |  |
 | &#9744; | Read [The JS Way: Loops](https://github.com/thejsway/thejsway/blob/master/manuscript/chapter04.md)  |  |
 | &#9744; | Set up portfolio |  |
 | &#9744; | Draft proposal/contract |  |

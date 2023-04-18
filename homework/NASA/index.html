@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>AstroPOD</h1>
+    <input id="date" type="date">
+    <button>To Infinity and Beyond</button>
+
+    <div id="astroPOD"></div>
+
+
+
+    
+    <script>
+        const dateToday = new Date()
+        
+        const dateInput = document.getElementById("date")
+
+        const makeRequest = document.querySelector("button")
+
+        const astroPOD = document.getElementById("astroPOD")
+        
+        makeRequest.addEventListener("click", nasa_apod)
+        
+        async function nasa_apod() {
+            //dealing with dates is really something
+            let fuck = new Date(dateInput.value.toString())
+            
+            let response;
+            
+            if (fuck.getTime() > dateToday.getTime()) {
+                response = await fetch("https://api.nasa.gov/planetary/apod?api_key=XsGuJbaIxEpraGqr4VuPvm9wYkypZLf7trhYV9Am")
+            } else {
+                response = await fetch(`https://api.nasa.gov/planetary/apod?api_key=XsGuJbaIxEpraGqr4VuPvm9wYkypZLf7trhYV9Am&date=${dateInput.value}`)
+            }
+
+            let data = await response.json()
+
+            console.log(Object.keys(data))
+
+            //reset DOM
+            astroPOD.innerHTML = ""
+
+            //create list of details.
+            const ul = document.createElement("ul")
+            for (let i = 0; i < 4; i++) {
+                const li = document.createElement("li")
+                switch(i) {
+                    case 0:
+                        li.innerText = data.date;
+                        break;
+                    case 1:
+                         li.innerText = data.explanation;
+                        break;
+                    case 2:
+                         li.innerText = data.hdurl;
+                        break;
+                    case 3:
+                         li.innerText = data.title;
+                        break;       
+                }
+                ul.appendChild(li)
+            }
+
+            astroPOD.appendChild(ul)
+            console.log(data)
+        }
+    </script>
+</body>
+</html>

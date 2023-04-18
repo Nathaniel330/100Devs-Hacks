@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+/*         img {
+            width: 50%;
+        }
+        #drinksContainer {
+            display: flex;
+            flex-direction: row;
+            overflow: auto;
+        }
+        #drinksContainer::-webkit-scrollbar {
+            display: none;
+        }
+        .box {
+            flex-basis: 1000px;
+        } */
+    </style>
+</head>
+<body>
+    <h1>ct database</h1>
+    <label>Search Cocktail By:
+        <select>
+            <option value="s" selected>Name</option>
+            <option value="f">First Letter</option>
+            <option value="i">Ingredient Name</option>
+        </select>
+    </label>
+    
+    <input id="search-input" type="text" placeholder="margarita / m / tequila" value="margarita">
+    <button>Go</button>
+
+    <div id="drinksContainer"></div>
+    
+    <script>
+    // https://dog.ceo/api/breeds/image/random
+    const searchBy = document.querySelector("select")
+        
+    const searchInput = document.getElementById("search-input")
+        
+    const goButton = document.querySelector("button")
+
+    const drinksContainer = document.getElementById("drinksContainer")
+        
+    goButton.addEventListener("click", searchCocktail)
+        
+        
+    async function searchCocktail() {
+        
+        let res;
+        
+        if (searchBy.value == "f") {
+            res = await fetch(`https://www.thecocktaildb.com/api/json/v1/1/search.php?${searchBy.value}=${searchInput.value.slice(0, 1)}`)
+        } else {
+            res = await fetch(`https://www.thecocktaildb.com/api/json/v1/1/search.php?${searchBy.value}=${searchInput.value}`)
+        }
+        
+
+    	const data = await res.json()
+
+        console.log(data.drinks)
+        drinksContainer.innerHTML = ""
+        
+        
+    	if (data.drinks) {
+            for (let i = 0; i < data.drinks.length; i++) {
+                const drinkBox = document.createElement("div")
+                const drinkBoxName = document.createElement("h2")
+                const drinkBoxImage = document.createElement("img")
+
+                drinkBox.setAttribute("class", "box")
+                drinkBoxName.innerText = data.drinks[i].strDrink
+                drinkBoxImage.src = data.drinks[i].strDrinkThumb
+
+
+                drinkBox.appendChild(drinkBoxName)
+                drinkBox.appendChild(drinkBoxImage)
+                drinksContainer.appendChild(drinkBox)
+            }
+        } else {
+            drinksContainer.innerText = "nothing to display"
+        }
+    }
+    </script>
+</body>
+</html>

@@ -6,7 +6,7 @@ html {
     padding: 0 10%;
     /* background-image: url("https://images.unsplash.com/photo-1506318137071-a8e063b4bec0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1493&q=80") */
     background-color: #0c0d07;
-    background-image: url(../img/milky-way.jpeg);
+    background-image: url(../img/content/milky-way.jpeg);
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;

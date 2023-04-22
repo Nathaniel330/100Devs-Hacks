@@ -1,7 +1,15 @@
-# #100Devs Homework Checklist
-![Codewars badge](https://www.codewars.com/users/Nathaniel330/badges/large)
+# #100Devs Hacks
+This repository contains the things I've done as I follow the cohort at my own pace. <br>
 
+LINK: https://nathaniel330.github.io/100Devs-Hacks/
 
+<br><br>
+
+![Codewars badge](https://www.codewars.com/users/Nathaniel330/badges/large) 
+
+<br>
+
+## #100Devs Homework Checklist
 | STATUS | TASK | WORK |
 | :----: | ---- | :----: |
 | &#9745; | Complete [Coursera — Learning How To Learn](https://www.coursera.org/learn/learning-how-to-learn) | [[RESULT]](X) |
@@ -18,7 +26,7 @@
 | &#9744; | Read [Shaye Howe: Responsive Design](https://learn.shayhowe.com/advanced-html-css/responsive-web-design/) |  |
 | &#9744; | Make [15 minutes of pain](public/img/resources/15-min-pain.png) responsive (use floats and 3 media queries) |  |
 | &#9744; | Read [Shay Howe: Advanced](https://learn.shayhowe.com/advanced-html-css/) |  |
-| &#9744; | Read [A Guide to Flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/) |  |
+| &#9745; | Read [A Guide to Flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/) |  |
 | &#9745; | Do [Flexbox Froggy](https://flexboxfroggy.com/) |  |
 | &#9744; | Watch Independence Day (1996 movie) |  |
 | &#9744; | Complete the Layouts for:<li>[BBC](public/img/resources/bbc-image.png)</li><li>[Khan Academy](public/img/resources/khan-academy.png)</li><li>[Tech Crunch](public/img/resources/techcrunch.png)</li> |  |
@@ -26,11 +34,8 @@
 | &#9744; | Do the [Restaurant](public/img/resources/restaurant.png) & [Hair Salon](public/img/resources/hair-salon.png) layouts |  |
 | &#9744; | Watch [JavaScript crash course for beginners](https://youtu.be/hdI2bqOjy3c) |  |
 | &#9744; | Extras<li>Complete [Pushwork](public/img/resources/pushwork.png) layout</li><li>Add media queries to other layouts</li><li>[FCC Flexbox Tutorial](https://www.freecodecamp.org/news/css-flexbox-tutorial-with-cheatsheet/)</li><li>[Flexbox in 20 minutes](https://youtu.be/JJSoEo8JSnc)</li><li>[Flexbox Zombies](https://mastery.games/flexboxzombies/)</li> |  |
-| &#9745; | Read [Javascript.info: Variables](https://javascript.info/variables) and do the tasks |  |
-| &#9745; | Read [Javascript.info: Function Basics](https://javascript.info/function-basics) and do the tasks |  |
-| &#9745; | Read [Javascript.info: Function Expressions](https://javascript.info/function-expressions) and do the tasks |  |
-| &#9745; | Read [Javascript.info: Arrow Function Basics](https://javascript.info/arrow-functions-basics) and do the tasks |  |
-| &#9744; | Read [The JS Way: Loops](https://github.com/thejsway/thejsway/blob/master/manuscript/chapter04.md)  |  |
+| &#9745; | Read and do the tasks: <li>[Javascript.info: Variables](https://javascript.info/variables)</li><li>[Javascript.info: Function Basics](https://javascript.info/function-basics)</li><li>[Javascript.info: Function Expressions](https://javascript.info/function-expressions)</li><li>[Javascript.info: Arrow Function Basics](https://javascript.info/arrow-functions-basics)</li> |  |
+| &#9745; | Read and do the tasks: <li>[The JS Way: Loops](https://github.com/thejsway/thejsway/blob/master/manuscript/chapter04.md)</li> |  |
 | &#9744; | Set up portfolio |  |
 | &#9744; | Draft proposal/contract |  |
 | &#9744; | Watch [Git and GitHub crash course](https://youtu.be/SWYqp7iY_Tc) |  |

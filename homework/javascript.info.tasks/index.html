@@ -382,10 +382,12 @@ const camelize = word => {
             <code>
 const filterRange = (array, a, b) => {
 
-    let filtered = array;
+    let filtered = array.slice();
     
     return filtered.filter(e => e >= a && e <= b)
-}</code>
+    
+}
+</code>
         </pre>
         <button id="arrayMethodsTask2Run">Run</button>
     </dialog>
@@ -404,6 +406,31 @@ const filterRange = (array, a, b) => {
 
     alert( arr ); // [3, 1]    </code>
     </pre>
+    <button id="arrayMethodsTask3Button" class="showAnswer">My Answer</button>
+    <dialog id="arrayMethodsTask3Dialog" class="modal">
+        <button id="arrayMethodsTask3Close" class="close">X</button><span> (or press "Escape" to close)</span>
+        <pre>
+            <code>
+const filterRangeInPlace = (array, a, b) => {
+    for (let i = 0; i < array.length; i++) {
+        let value = array[i]
+
+        // the order of inputs a and b should not matter
+        // we need values between a and b
+        if (b < a) {
+            [b, a] = [a, b]
+        }
+
+        // remove if outside of the interval
+        if (value < a || value > b) {
+            array.splice(i, 1)
+            i--
+        }
+    }
+}</code>
+        </pre>
+        <button id="arrayMethodsTask3Run">Run</button>
+    </dialog>
 
     <hr>
 

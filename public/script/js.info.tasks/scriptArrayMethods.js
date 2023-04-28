@@ -49,7 +49,7 @@ export const filterRange = (array, a, b) => {
     a = prompt("a = ___")
     b = prompt("b = ___")
     let filtered = array.slice();
-    return alert(filtered.filter(e => e >= a && e <= b))
+    alert(`filterRange(array, a, b) = [ ${filtered.filter(e => e >= a && e <= b)} ]\narray = [ ${arr} ]`)
 }
 
 // tests
@@ -68,9 +68,19 @@ export const filterRange = (array, a, b) => {
 //     filterRangeInPlace(arr2, 1, 4); // removed the numbers except from 1 to 4
 //     alert( arr2 ); // [3, 1]    
 
-const filterRangeInPlace = (array, a, b) => {
+export const filterRangeInPlace = (array, a, b) => {
+    alert(`array = [ ${arr2} ]`)
+    array = arr2
+    a = prompt("a = ___")
+    b = prompt("b = ___")
     for (let i = 0; i < array.length; i++) {
         let value = array[i]
+
+        // the order of inputs a and b should not matter
+        // we need values between a and b
+        if (b < a) {
+            [b, a] = [a, b]
+        }
 
         // remove if outside of the interval
         if (value < a || value > b) {
@@ -78,9 +88,10 @@ const filterRangeInPlace = (array, a, b) => {
             i--
         }
     }
+    alert(`array = [ ${arr2} ]`)
 }
 
-filterRangeInPlace(arr2, 1, 4)
+//filterRangeInPlace(arr2, 1, 4)
 
 // test
 // console.log(arr2)

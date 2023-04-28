@@ -80,11 +80,14 @@ window.addEventListener("DOMContentLoaded", () => {
         arrMethods.camelize()
     })
 
+    //Array Methods 2
     arrayMethodsTask2Run.addEventListener('click', () => {
         arrMethods.filterRange()
     })
     
-
+    arrayMethodsTask3Run.addEventListener('click', () => {
+        arrMethods.filterRangeInPlace()
+    })
 });
 
 

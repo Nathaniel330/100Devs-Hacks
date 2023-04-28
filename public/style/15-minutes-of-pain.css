@@ -1,0 +1,52 @@
+* {
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+}
+
+html, body {
+    background-color: #c0c0c0;
+    height: 100%;
+}
+
+header, footer, aside, section, div {
+    border: solid;
+}
+
+header, footer {
+    height: 12.5%;
+}
+aside, section, div {
+    width: 33.3333%;
+    height: 75%;
+    float: left;
+}
+
+footer {
+    clear: both;
+}
+
+@media screen and (max-width: 991px) {
+    aside, section, div {
+        height: 37.5%;
+    }
+
+    aside, section {
+        width: 50%;
+    }
+
+    div {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 495px) {
+    div, aside, section {
+        height: 25%;
+        width: 100%;
+    }
+}

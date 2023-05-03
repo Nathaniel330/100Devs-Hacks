@@ -31,7 +31,19 @@ console.log(`Look, a cat! ${snowy.name} barks: ${snowy.bark()}`);
 
 // OOP.Character inventory
 // Improve the example RPG to add character inventory management according to the following rules:
-
+class Character {
+    constructor(name, health, strength) {
+      this.name = name;
+      this.health = health;
+      this.strength = strength;
+      this.xp = 0; // XP is always zero for new characters
+    }
+    // Return the character description
+    describe() {
+      return `${this.name} has ${this.health} health points, ${this
+        .strength} as strength and ${this.xp} XP points`;
+    }
+  }
 // A character's inventory contains a number of gold and a number of keys.
 
 // Each character begins with 10 gold and 1 key.
@@ -47,6 +59,7 @@ console.log(`Look, a cat! ${snowy.name} barks: ${snowy.bark()}`);
 // Let's build upon a previous account object exercise. A bank account is still defined by:
 
 // A name property.
+
 // A balance property, initially set to 0.
 // A credit method adding the value passed as an argument to the account balance.
 // A describe method returning the account description.

@@ -443,6 +443,16 @@ const filterRangeInPlace = (array, a, b) => {
 
     alert( arr ); // 8, 5, 2, 1, -10    </code>
     </pre>
+    <button id="arrayMethodsTask4Button" class="showAnswer">My Answer</button>
+    <dialog id="arrayMethodsTask4Dialog" class="modal">
+        <button id="arrayMethodsTask4Close" class="close">X</button><span> (or press "Escape" to close)</span>
+        <pre>
+            <code>
+arr.sort((a, b) => a > b ? -1 : 1)
+</code>
+        </pre>
+        <button id="arrayMethodsTask4Run">Run</button>
+    </dialog>
 
     <hr>
 
@@ -458,6 +468,35 @@ const filterRangeInPlace = (array, a, b) => {
     alert( sorted ); // CSS, HTML, JavaScript
     alert( arr ); // HTML, JavaScript, CSS (no changes)    </code>
     </pre>
+    <button id="arrayMethodsTask5Button" class="showAnswer">My Answer</button>
+    <dialog id="arrayMethodsTask5Dialog" class="modal">
+        <button id="arrayMethodsTask5Close" class="close">X</button><span> (or press "Escape" to close)</span>
+        <pre>
+            <code>
+const copySorted = array => {
+    // To keep the input array unmodified,
+    // one should create a copy of it,
+    // and use that copy in the program
+
+    // Create a copy of the array - way #1
+    // const copy = array.slice()
+
+    // Create a copy of the array - way #2
+    // const copy = [].concat(array)
+
+    // Create a copy of the array - way #3
+    // const copy = [...array]
+
+    // Create a copy of the array - way #4
+    const copy = Array.from(array)
+    return copy.sort()
+}
+
+let sorted = copySorted(arr);
+</code>
+        </pre>
+        <button id="arrayMethodsTask5Run">Run</button>
+    </dialog>
 
     <hr>
 
@@ -499,6 +538,39 @@ const filterRangeInPlace = (array, a, b) => {
     <p>No parentheses or complex expressions in this task.</p>
     <p>The numbers and the operator are delimited with exactly one space.</p>
     <p>There may be error handling if you’d like to add it.</p>
+    <button id="arrayMethodsTask6Button" class="showAnswer">My Answer</button>
+    <dialog id="arrayMethodsTask6Dialog" class="modal">
+        <button id="arrayMethodsTask6Close" class="close">X</button><span> (or press "Escape" to close)</span>
+        <pre>
+            <code>
+function Calculator() {
+    this.operations = {
+        "+": (a, b) => a + b,
+        "-": (a, b) => a - b
+    }
+}
+
+Calculator.prototype.calculate = function(str) {
+    let split = str.split(" ")
+    let x = +split[0]
+    let op = split[1]
+    let y = +split[2]
+
+    return this.operations[op](x, y)
+}
+
+Calculator.prototype.addMethod = function(name, func) {
+    this.operations[name] = func
+}
+
+let powerCalc = new Calculator;
+powerCalc.addMethod("*", (a, b) => a * b);
+powerCalc.addMethod("/", (a, b) => a / b);
+powerCalc.addMethod("**", (a, b) => a ** b);
+                
+</code>
+        </pre>
+    </dialog>
 
     <hr>
 
@@ -517,6 +589,15 @@ const filterRangeInPlace = (array, a, b) => {
 
     alert( names ); // John, Pete, Mary</code>
     </pre>
+    <button id="arrayMethodsTask7Button" class="showAnswer">My Answer</button>
+    <dialog id="arrayMethodsTask7Dialog" class="modal">
+        <button id="arrayMethodsTask7Close" class="close">X</button><span> (or press "Escape" to close)</span>
+        <pre>
+            <code>
+let names = users.map(user => user.name)
+</code>
+        </pre>
+    </dialog>
 
     <hr>
 
@@ -546,6 +627,18 @@ const filterRangeInPlace = (array, a, b) => {
     alert( usersMapped[0].fullName ) // John Smith</code>
     </pre>
     <p>So, actually you need to map one array of objects to another. Try using <code>=></code> here. There’s a small catch.</p>
+    <button id="arrayMethodsTask8Button" class="showAnswer">My Answer</button>
+    <dialog id="arrayMethodsTask8Dialog" class="modal">
+        <button id="arrayMethodsTask8Close" class="close">X</button><span> (or press "Escape" to close)</span>
+        <pre>
+            <code>
+let usersMapped = users.map( user => ({
+    fullName: `${user.name} ${user.surname}`,
+    id: user.id
+}))
+</code>
+        </pre>
+    </dialog>
 
     <hr>
 
@@ -567,6 +660,17 @@ const filterRangeInPlace = (array, a, b) => {
     alert(arr[1].name); // Mary
     alert(arr[2].name); // Pete      </code>
     </pre>
+    <button id="arrayMethodsTask9Button" class="showAnswer">My Answer</button>
+    <dialog id="arrayMethodsTask9Dialog" class="modal">
+        <button id="arrayMethodsTask9Close" class="close">X</button><span> (or press "Escape" to close)</span>
+        <pre>
+            <code>
+function sortByAge(array) {
+    return array.sort((a, b) => a.age > b.age ? 1 : -1)
+};
+</code>
+        </pre>
+    </dialog>
 
     <hr>
 
@@ -605,6 +709,18 @@ const filterRangeInPlace = (array, a, b) => {
     
     alert( getAverageAge(arr) ); // (25 + 30 + 29) / 3 = 28</code>
     </pre>
+    <button id="arrayMethodsTask11Button" class="showAnswer">My Answer</button>
+    <dialog id="arrayMethodsTask11Dialog" class="modal">
+        <button id="arrayMethodsTask11Close" class="close">X</button><span> (or press "Escape" to close)</span>
+        <pre>
+            <code>
+function getAverageAge(users) {
+    const total = users.reduce((acc, c) => acc + c.age, 0)
+    return total / users.length
+}
+</code>
+        </pre>
+    </dialog>
 
     <hr>
 
@@ -624,6 +740,20 @@ const filterRangeInPlace = (array, a, b) => {
     
     alert( unique(strings) ); // Hare, Krishna, :-O </code>
     </pre>
+
+    <button id="arrayMethodsTask12Button" class="showAnswer">My Answer</button>
+    <dialog id="arrayMethodsTask12Dialog" class="modal">
+        <button id="arrayMethodsTask12Close" class="close">X</button><span> (or press "Escape" to close)</span>
+        <pre>
+            <code>
+function unique(arr) {
+    return arr.filter((element, index, arr) => index == arr.indexOf(element))
+}
+</code>
+        </pre>
+    </dialog>
+
+    
 
     <hr>
 
@@ -654,6 +784,21 @@ const filterRangeInPlace = (array, a, b) => {
     <p>Such function is really handy when working with server data</p>
     <p>In this task we assume that <code>id</code> is unique. There may be no two array items with the same <code>id</code>.</p>
     <p>Please use array <code>.reduce</code> method in the solution.</p>
+
+    <button id="arrayMethodsTask11Button" class="showAnswer">My Answer</button>
+    <dialog id="arrayMethodsTask11Dialog" class="modal">
+        <button id="arrayMethodsTask11Close" class="close">X</button><span> (or press "Escape" to close)</span>
+        <pre>
+            <code>
+function groupById(arr) {
+    return arr.reduce((acc, c) => {
+        acc[c.id] = c
+        return acc
+    }, {})
+}
+</code>
+        </pre>
+    </dialog>
 
 
     <hr>

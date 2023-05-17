@@ -102,8 +102,12 @@ export const filterRangeInPlace = (array, a, b) => {
     let arr3 = [5, 2, 1, -10, 8];
 // // ... your code to sort it in decreasing order
 // alert( arr3 ); // 8, 5, 2, 1, -10
+export const sortInDecreasingOrder = arr => {
+    alert(`array = [ ${arr3} ]`)
+    alert(`array = [ ${arr3} ]\n\narr.sort((a, b) => a > b ? -1 : 1)`)
+    alert(`array = [ ${arr3} ]\n\narr.sort((a, b) => a > b ? -1 : 1)\n\narray = [ ${arr3.sort((a, b) => a > b ? -1 : 1)} ]`)
+}
 
-arr3.sort((a, b) => a > b ? -1 : 1)
 
 // test
 // console.log(arr3)
@@ -120,12 +124,16 @@ arr3.sort((a, b) => a > b ? -1 : 1)
 // alert( sorted ); // CSS, HTML, JavaScript
 // alert( arr4 ); // HTML, JavaScript, CSS (no changes)
 
-const copySorted = array => {
-    let copy = array.slice()
+export const copySorted = array => {
+    const copy = Array.from(arr4)
+    alert(`array = [ ${arr4} ]`)
+    alert(`array = [ ${arr4} ]\n\nsorted = copySorted(array)`)
+    alert(`array = [ ${arr4} ]\n\nsorted = copySorted(array)\n\nsorted = [ ${copy.sort()} ]`)
+    alert(`array = [ ${arr4} ]\n\nsorted = copySorted(array)\n\nsorted = [ ${copy.sort()} ]\n\narray = [ ${arr4} ]`)
     return copy.sort()
 }
 
-let sorted = copySorted(arr4);
+// let sorted = copySorted(arr4);
 
 
 //tests
@@ -215,8 +223,7 @@ let userz = [ johna, peter, marya ];
 let usersMapped = userz.map( user => ({
     fullName: `${user.name} ${user.surname}`,
     id: user.id
-}) 
-)
+}))
 
 /*
 usersMapped = [
@@ -308,7 +315,7 @@ let maery = { name: "Maery", age: 29 };
 
 let arrAge = [ johnn, pette, maery ];
 
-function getAverageAge(users) {
+export function getAverageAge(users) {
     const total = users.reduce((acc, c) => acc + c.age, 0)
     return total / users.length
 }

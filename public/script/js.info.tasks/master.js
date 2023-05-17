@@ -88,6 +88,14 @@ window.addEventListener("DOMContentLoaded", () => {
     arrayMethodsTask3Run.addEventListener('click', () => {
         arrMethods.filterRangeInPlace()
     })
+
+    arrayMethodsTask4Run.addEventListener('click', () => {
+        arrMethods.sortInDecreasingOrder()
+    })
+
+    arrayMethodsTask5Run.addEventListener('click', () => {
+        arrMethods.copySorted()
+    })
 });
 
 
